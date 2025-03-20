@@ -1,6 +1,8 @@
 let number = Math.floor(Math.random() * 100) + 1
 let inputNumber = document.getElementById('inputNumber')
 let message = document.getElementById('message')
+let attemptCount = document.getElementById('attemptCount')
+let attempts = 0
 
 function review(){
     let inputNumber = parseInt(this.inputNumber.value)
@@ -11,6 +13,9 @@ function review(){
         this.message.style.backgroundColor = '#f8f9fa'
         return
     }
+
+    attempts++
+    attemptCount.textContent = attempts
 
     if (inputNumber > number) {
         this.message.innerHTML = 'Too high'
@@ -25,7 +30,7 @@ function review(){
     }
 
     if (inputNumber === number) {
-        this.message.innerHTML = 'Congratulations! You guessed the number'
+        this.message.innerHTML = `Congratulations! You guessed the number in ${attempts} attempts`
         this.message.style.color = 'green'
         this.message.style.backgroundColor = '#e8f5e9'
         this.inputNumber.disabled = true

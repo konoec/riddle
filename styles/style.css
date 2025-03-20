@@ -24,17 +24,40 @@ body {
 
 h1 {
     color: #1a1f36;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.game-stats {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .game-description {
     color: #4f566b;
     font-size: 1.1rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.attempts {
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.message {
+    margin-top: 1.5rem;
+    background-color: #f8f9fa;
+    color: #4f566b;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: all 0.2s ease;
 }
 
 .input-section {
@@ -83,34 +106,4 @@ button:hover {
 
 button:active {
     transform: translateY(0);
-}
-
-.message {
-    background-color: #f8f9fa;
-    color: #4f566b;
-    padding: 1.2rem;
-    border-radius: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-}
-
-@media (min-width: 480px) {
-    .input-section {
-        grid-template-columns: 1fr auto;
-        gap: 1rem;
-    }
-
-    input, button {
-        width: auto;
-    }
-
-    input {
-        min-width: 160px;
-    }
-
-    button {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
 }

@@ -9,7 +9,10 @@
 <body>
     <div class="container">
         <h1>Number Guessing Game</h1>
-        <p class="game-description">Try to guess the number between 1 and 100</p>
+        <div class="game-stats">
+            <p class="game-description">Try to guess the number between 1 and 100</p>
+            <p class="attempts">Attempts: <span id="attemptCount">0</span></p>
+        </div>
         <div class="input-section">
             <input id="inputNumber" type="number" min="1" max="100" placeholder="Enter number">
             <button onclick="review()">Guess</button>
@@ -18,7 +21,6 @@
             Enter a number and click Guess
         </div>
     </div>
-
     <script src="scripts/script.js"></script>
 </body>
 </html>
